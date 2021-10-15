@@ -1,10 +1,13 @@
 {
-  "name": "microdata-extractor",
+  "name": "@findbycolor/microdata-extractor",
   "version": "0.1.0",
   "description": "Web Crawler & Microdata Extractor",
   "main": "./bin/cli.js",
   "license": "unlicensed",
   "private": true,
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
+  },
   "bin": {
     "extract": "./bin/cli.js"
   },
