@@ -1,0 +1,181 @@
+{
+  "microdata": {
+    "AggregateRating": [{
+      "@context": "http://schema.org/",
+      "@type": "AggregateRating",
+      "ratingValue": "4.5",
+      "bestRating": "5",
+      "reviewCount": "843"
+    }],
+    "Review": [{
+      "@context": "http://schema.org/",
+      "@type": "Review",
+      "reviewRating": {
+        "@context": "http://schema.org/",
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": "AndreaLo",
+      "name": "Very Comfy",
+      "description": "Loved the way these fit and how comfortable there are!",
+      "datePublished": "2021-09-13"
+    }, {
+      "@context": "http://schema.org/",
+      "@type": "Review",
+      "reviewRating": {
+        "@context": "http://schema.org/",
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": "Og3024",
+      "name": "Shoes",
+      "description": "Very comfortable for da great price will shop for more under armour shoes",
+      "datePublished": "2021-09-07"
+    }, {
+      "@context": "http://schema.org/",
+      "@type": "Review",
+      "reviewRating": {
+        "@context": "http://schema.org/",
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": "Dawn",
+      "name": "Comfortable",
+      "description": "The running shoes are light and comfortable and good quality.",
+      "datePublished": "2021-09-05"
+    }, {
+      "@context": "http://schema.org/",
+      "@type": "Review",
+      "reviewRating": {
+        "@context": "http://schema.org/",
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": "Jereme",
+      "name": "The shoes are super comfortable.",
+      "description": "I am hard on a pair of shoes and it takes a while for me to comfortable with them, but these are Awesome! They were perfect the first time I wore them.",
+      "datePublished": "2021-09-04"
+    }, {
+      "@context": "http://schema.org/",
+      "@type": "Review",
+      "reviewRating": {
+        "@context": "http://schema.org/",
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": "None",
+      "name": "good shoe",
+      "description": "good price and very good brand of shoe",
+      "datePublished": "2021-08-27"
+    }, {
+      "@context": "http://schema.org/",
+      "@type": "Review",
+      "reviewRating": {
+        "@context": "http://schema.org/",
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": "prad",
+      "name": "Light Weight and perfect fit!",
+      "description": "Bought for my jogging and running. Feels very light weight and perfect fit.\nI am a fan of UA's shoes.",
+      "datePublished": "2021-08-27"
+    }, {
+      "@context": "http://schema.org/",
+      "@type": "Review",
+      "reviewRating": {
+        "@context": "http://schema.org/",
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": "Buyer of Shoes",
+      "name": "Great shoes.",
+      "description": "[This review was collected as part of a promotion.] Received the shoe. They are comfortable and light.",
+      "datePublished": "2021-08-25"
+    }, {
+      "@context": "http://schema.org/",
+      "@type": "Review",
+      "reviewRating": {
+        "@context": "http://schema.org/",
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": "BarbW",
+      "name": "Great sneakers.",
+      "description": "I bought these for my husband as a Birthday gift. He has a hard time finding comfortable sneakers that fit (he has very wide flat feet). These fit him perfectly and he said they are super comfortable. I think we have finally found a sneaker that is just right for him.",
+      "datePublished": "2021-08-19"
+    }]
+  },
+  "rdfa": {},
+  "metatags": {
+    "x-ua-compatible": ["ie=edge"],
+    "viewport": ["width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no"],
+    "description": ["Shop Under Armour for Men's UA Charged Assert 8 Running Shoes"],
+    "keywords": ["Under Armour"],
+    "format-detection": ["telephone=no"],
+    "og:type": ["website"],
+    "og:site_name": ["Under Armour"],
+    "og:title": ["Men's UA Charged Assert 8 Running Shoes"],
+    "og:url": ["https://www.underarmour.com/en-us/p/running/mens-ua-charged-assert-8-running-shoes/3021952.html?dwvar_3021952_color=112&start=0&breadCrumbLast=Men"],
+    "og:description": ["Shop Under Armour for Men's UA Charged Assert 8 Running Shoes"],
+    "coremedia_content_id": ["4822"],
+    "datePublished": ["2021-09-13", "2021-09-07", "2021-09-05", "2021-09-04", "2021-08-27", "2021-08-27", "2021-08-25", "2021-08-19"]
+  },
+  "jsonld": {
+    "Product": [{
+      "@context": "http://schema.org/",
+      "@type": "Product",
+      "@id": "https://www.underarmour.com/en-us/p/running/mens-ua-charged-assert-8-running-shoes/3021952.html",
+      "productID": "3021952",
+      "name": "Men's UA Charged Assert 8 Running Shoes",
+      "description": "These are running shoes anyone can wear to go faster—with Charged Cushioning™ to help protect against impact, a breathable upper, and durability for miles.",
+      "url": "https://www.underarmour.com/en-us/p/running/mens-ua-charged-assert-8-running-shoes/3021952.html",
+      "mpn": "3021952",
+      "sku": "3021952-112-7",
+      "brand": {
+        "@type": "Brand",
+        "name": "UnderArmour"
+      },
+      "image": ["https://underarmour.scene7.com/is/image/Underarmour/3021952-112_DEFAULT?rp=standard-30pad|pdpMainDesktop&scl=1&fmt=jpg&qlt=85&resMode=sharp2&cache=on,on&bgc=f0f0f0&wid=566&hei=708&size=536,688", "https://underarmour.scene7.com/is/image/Underarmour/3021952-112_A?rp=standard-30pad|pdpMainDesktop&scl=1&fmt=jpg&qlt=85&resMode=sharp2&cache=on,on&bgc=f0f0f0&wid=566&hei=708&size=536,688", "https://underarmour.scene7.com/is/image/Underarmour/3021952-112_TOE?rp=standard-30pad|pdpMainDesktop&scl=1&fmt=jpg&qlt=85&resMode=sharp2&cache=on,on&bgc=f0f0f0&wid=566&hei=708&size=536,688", "https://underarmour.scene7.com/is/image/Underarmour/3021952-112_PAIR?rp=standard-30pad|pdpMainDesktop&scl=1&fmt=jpg&qlt=85&resMode=sharp2&cache=on,on&bgc=f0f0f0&wid=566&hei=708&size=536,688", "https://underarmour.scene7.com/is/image/Underarmour/3021952-112_SOLE?rp=standard-30pad|pdpMainDesktop&scl=1&fmt=jpg&qlt=85&resMode=sharp2&cache=on,on&bgc=f0f0f0&wid=566&hei=708&size=536,688"],
+      "offers": {
+        "url": "https://www.underarmour.com/en-us/p/running/mens-ua-charged-assert-8-running-shoes/3021952.html",
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "70.00",
+        "availability": "http://schema.org/InStock"
+      }
+    }],
+    "BreadcrumbList": [{
+      "@context": "http://schema.org/",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Men",
+        "item": "https://www.underarmour.com/en-us/c/mens/"
+      }, {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Shop by Category",
+        "item": "https://www.underarmour.com/en-us/c/mens-all/"
+      }, {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Shoes",
+        "item": "https://www.underarmour.com/en-us/c/mens/shoes/"
+      }, {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Running",
+        "item": "https://www.underarmour.com/en-us/c/mens/shoes/running/"
+      }]
+    }]
+  }
+}

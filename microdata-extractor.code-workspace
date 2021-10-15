@@ -1,0 +1,29 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"window.title": "Find By Color${separator}Microdata Extractor${separator}${activeEditorShort}",
+		"cSpell.words": [
+      "3dcart",
+      "findbycolor",
+      "itemprop",
+      "itemtype",
+      "jsonld",
+      "Magento",
+      "metatag",
+      "metatags",
+      "Microdata",
+      "onclosetag",
+      "onopentag",
+      "ontext",
+      "rdfa",
+      "scriptshelp",
+      "Smoolis",
+      "Squarespace",
+      "Weebly"
+    ],
+	}
+}

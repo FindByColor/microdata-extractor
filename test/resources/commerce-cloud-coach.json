@@ -1,0 +1,69 @@
+{
+  "microdata": {},
+  "rdfa": {},
+  "metatags": {
+    "x-ua-compatible": ["ie=edge"],
+    "viewport": ["width=device-width, initial-scale=1, user-scalable=no"],
+    "Accept-CH": ["RTT, Downlink, ECT"],
+    "description": ["We made our lovable, bestselling Rogue with luggage handles made of recycled plastic bottles. It's all part of our commitment to rethinking and reducing our impact on the planet by repurposing waste materials. And there's even more to love: Slightly smaller than the original, this buttery soft glovetanned leather 25 has two open compartments, and a secure center zip compartment. It's crafted to last, so wear it, love it, pass it on."],
+    "keywords": ["Commerce Cloud Storefront Reference Architecture"],
+    "robots": ["index, follow"],
+    "twitter:card": ["summary"],
+    "twitter:title": ["Rogue 25 With Recycled Handles | COACH"],
+    "twitter:image": ["https://images.coach.com/is/image/Coach/c7619_b4ua_a0?$desktopProduct$"]
+  },
+  "jsonld": {
+    "BreadcrumbList": [{
+      "@context": "https://schema.org/",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Women",
+        "item": ["https://www.coach.com/shop/women"]
+      }, {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Handbags",
+        "item": ["https://www.coach.com/shop/women/handbags"]
+      }, {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Shoulder Bags & Hobos",
+        "item": ["https://www.coach.com/shop/women/handbags/shoulder-bags-hobos"]
+      }, {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Rogue 25 With Recycled Handles",
+        "item": ["https://www.coach.com/products/rogue-25-with-recycled-handles/C7619+B4%2FUA.html"]
+      }]
+    }],
+    "Product": [{
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "Rogue 25 With Recycled Handles",
+      "description": "We made our lovable, bestselling Rogue with luggage handles made of recycled plastic bottles. It's all part of our commitment to rethinking and reducing our impact on the planet by repurposing waste materials. And there's even more to love: Slightly smaller than the original, this buttery soft glovetanned leather 25 has two open compartments, and a secure center zip compartment. It's crafted to last, so wear it, love it, pass it on.",
+      "mpn": "C7619 B4/UA",
+      "sku": "C7619 B4/UA",
+      "brand": {
+        "@type": "Thing",
+        "name": "COACH®"
+      },
+      "image": ["https://images.coach.com/is/image/Coach/c7619_b4ua_a0?$desktopProduct$", "https://images.coach.com/is/image/Coach/c7619_b4ua_a3?$desktopProduct$", "https://images.coach.com/is/image/Coach/c7619_b4ua_a8?$desktopProduct$"],
+      "offers": [{
+        "@type": "Offer",
+        "url": "https://www.coach.com/products/rogue-25-with-recycled-handles/C7619+B4%2FUA.html",
+        "availability": "http://schema.org/InStock",
+        "priceCurrency": "USD",
+        "price": 695,
+        "priceValidUntil": "9999-12-31",
+        "sku": "C7619 B4/UA"
+      }],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.6",
+        "reviewCount": "147"
+      }
+    }]
+  }
+}

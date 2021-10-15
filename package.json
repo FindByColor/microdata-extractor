@@ -1,0 +1,98 @@
+{
+  "name": "microdata-extractor",
+  "version": "0.1.0",
+  "description": "Web Crawler & Microdata Extractor",
+  "main": "./bin/cli.js",
+  "license": "unlicensed",
+  "private": true,
+  "bin": {
+    "extract": "./bin/cli.js"
+  },
+  "engines": {
+    "node": ">=14.17.3",
+    "npm": ">= 6.14.13"
+  },
+  "scripts": {
+    "build": "babel src -d dist",
+    "test": "mocha --recursive --require babel-core/register",
+    "lint": "standard --fix",
+    "dev": "nodemon --exec npm run lint",
+    "prepublish": "npm run lint && npm run test && npm run build",
+    "postinstall": "npm run build",
+    "help": "node node_modules/npm-scripts-help"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FindByColor/microdata-extractor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/FindByColor/microdata-extractor/issues"
+  },
+  "keywords": [
+    "crawler",
+    "parser",
+    "html parser",
+    "schema.org",
+    "microdata",
+    "rdfa",
+    "jsonld",
+    "seo"
+  ],
+  "author": {
+    "name": "Peter Schmalfeldt",
+    "email": "peter@findbycolor.com",
+    "url": "https://findbycolor.com"
+  },
+  "homepage": "https://github.com/FindByColor/microdata-extractor#readme",
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "chalk": "^4.1.2",
+    "cheerio": "^1.0.0-rc.10",
+    "htmlparser2": "^7.1.2",
+    "md5": "^2.3.0",
+    "rimraf": "^3.0.2",
+    "sanitize-html": "^2.5.1",
+    "yargs": "^17.2.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^10.1.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "chai": "^4.3.4",
+    "mocha": "^9.1.2",
+    "nodemon": "^2.0.13",
+    "npm-scripts-help": "^0.8.0",
+    "pre-commit": "^1.2.2",
+    "sinon": "^11.1.2",
+    "standard": "^16.0.4"
+  },
+  "pre-commit": [
+    "lint",
+    "test"
+  ],
+  "scriptshelp": {
+    "help-message": "Microdata Extractor Commands:",
+    "help": {
+      "Description": "Generates List of NPM Scripts you can run"
+    },
+    "build": {
+      "Description": "Build & Compile Microdata Extractor"
+    },
+    "test": {
+      "Description": "Perform Unit Tests"
+    },
+    "lint": {
+      "Description": "Tests Javascript Code against Linting Rules"
+    },
+    "dev": {
+      "Description": "Watches for Code Changes and runs linter"
+    },
+    "prepublish": {
+      "Description": "Automatically Runs before: npm publish"
+    },
+    "postinstall": {
+      "Description": "Automatically Runs after: npm install"
+    }
+  }
+}

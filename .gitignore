@@ -1,0 +1,10 @@
+.DS_Store
+.tmp
+node_modules
+npm-debug.log
+dist
+build/
+*.code-workspace
+!.nvmrc
+!.cache
+!microdata-extractor.code-workspace
