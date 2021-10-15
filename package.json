@@ -4,7 +4,6 @@
   "description": "Web Crawler & Microdata Extractor",
   "main": "./bin/cli.js",
   "license": "unlicensed",
-  "private": true,
   "publishConfig": {
     "registry":"https://npm.pkg.github.com"
   },
