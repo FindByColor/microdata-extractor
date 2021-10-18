@@ -8,9 +8,9 @@ const fileReader = (fileName) => fs.readFileSync(fileName, { encoding: 'utf-8' }
 
 // Test Configuration
 const test = {
-  id: 'commerce-cloud-coach',
-  label: 'Commerce Cloud - Coach',
-  url: 'https://www.coach.com/products/rogue-25-with-recycled-handles/C7619+B4%2FUA.html'
+  id: 'shopify-allbirds',
+  label: 'Shopify - Allbirds',
+  url: 'https://www.allbirds.com/products/mens-trail-runners-swt'
 }
 
 // Create File Paths

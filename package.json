@@ -1,11 +1,11 @@
 {
   "name": "@findbycolor/microdata-extractor",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Web Crawler & Microdata Extractor",
   "main": "./bin/cli.js",
   "license": "unlicensed",
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com"
   },
   "bin": {
     "extract": "./bin/cli.js"
@@ -17,8 +17,9 @@
   "scripts": {
     "build": "babel src -d dist",
     "test": "mocha --recursive --require babel-core/register",
+    "test:single": "mocha --require babel-core/register",
     "lint": "standard --fix",
-    "dev": "nodemon --exec npm run lint",
+    "dev": "nodemon --watch src --watch bin --watch commands --exec npm run build",
     "prepublish": "npm run lint && npm run test && npm run build",
     "postinstall": "npm run build",
     "help": "node node_modules/npm-scripts-help"
@@ -54,6 +55,7 @@
     "md5": "^2.3.0",
     "rimraf": "^3.0.2",
     "sanitize-html": "^2.5.1",
+    "uuid": "^8.3.2",
     "yargs": "^17.2.1"
   },
   "devDependencies": {

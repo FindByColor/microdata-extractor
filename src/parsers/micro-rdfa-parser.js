@@ -147,5 +147,6 @@ const createHandler = specName => {
 export default (html, specName) => {
   const handler = createHandler(specName)
   new Parser(handler).end(html)
-  return handler.topLevelScope
+
+  return JSON.stringify(handler.topLevelScope) !== '{}' ? handler.topLevelScope : null
 }

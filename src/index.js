@@ -17,7 +17,7 @@ export default function () {
     $html = _$html
   }
 
-  const extract = function (html, options) {
+  const extract = function (url, html, options) {
     // Cleanup HTML as parser will fail to extract data from within unclosed HTML Tags
     if (html) {
       html = sanitizeHtml(html, {
@@ -35,7 +35,7 @@ export default function () {
     const metatags = MetaTagsParser($html)
     const microdata = MicroRdfaParser(html, 'micro')
     const rdfa = MicroRdfaParser(html, 'rdfa')
-    const product = ProductParser(html, jsonld, metatags, microdata, rdfa)
+    const product = (jsonld || metatags || microdata || rdfa) ? ProductParser(url, html, jsonld, metatags, microdata, rdfa) : null
 
     return {
       metatags,

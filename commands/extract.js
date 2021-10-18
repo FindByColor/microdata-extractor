@@ -46,8 +46,6 @@ module.exports = async options => {
   if (url) {
     const cacheKey = md5(url)
     const cacheFile = path.join(cacheDir, cacheKey)
-
-    const fetch = new URL(url)
     const timeout = options.timeout || 30000
 
     const hasCache = fs.existsSync(cacheFile)
@@ -64,8 +62,8 @@ module.exports = async options => {
       }
     }
 
-    const parseHTML = (html, cache) => {
-      const { jsonld, metatags, microdata, product, rdfa } = Microdata().extract(html)
+    const parseHTML = (url, html, cache) => {
+      const { jsonld, metatags, microdata, product, rdfa } = Microdata().extract(url, html)
       const data = { jsonld, metatags, microdata, product, rdfa }
 
       // Check if we had any custom output settings
@@ -99,9 +97,20 @@ module.exports = async options => {
 
     if (useCache) {
       const html = fs.readFileSync(cacheFile, { encoding: 'utf8' }).toString()
-      parseHTML(html)
+      parseHTML(url, html)
     } else {
-      const request = await https.get(fetch, res => {
+      const getOptions = {
+        headers: {
+          'User-Agent': 'FindByColorBot/1.0; (+http://findbycolor.com/bot; bot@findbycolor.com)'
+        }
+      }
+
+      const request = await https.get(url, getOptions, res => {
+        if (res.statusCode !== 200) {
+          console.log(`\n${chalk.bold.red('✖ ERROR:')} Received ${res.statusCode} Error\n`)
+          request.abort()
+        }
+
         let html = ''
 
         res.on('data', chunk => {
@@ -109,7 +118,7 @@ module.exports = async options => {
         })
 
         res.on('end', () => {
-          parseHTML(html, true)
+          parseHTML(url, html, true)
         })
       }).on('error', e => {
         console.log(`\n${chalk.bold.red('✖ ERROR:')} ${e.message}\n`)

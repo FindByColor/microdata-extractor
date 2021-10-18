@@ -5,6 +5,24 @@
 Developer Setup
 ===
 
+Requirements
+---
+
+- [X] [Node v14+](https://nodejs.org/en/download/)
+
+Install via `npm install`
+---
+
+Please note that this is a private NPM package, and you will need to have completed the steps covered in our [Private NPM Access](https://github.com/FindByColor/.github/wiki/Private-NPM-Access) documentation.
+
+```bash
+npm install -g microdata-extractor
+extract help
+```
+
+Install via `git clone`
+---
+
 You can download this project using the code below ( this assumes you have [SSH integrated with Github](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/) ):
 
 ```bash
@@ -12,31 +30,4 @@ git clone git@github.com:FindByColor/microdata-extractor.git
 cd microdata-extractor
 npm install -g
 extract help
-```
-
-NPM Scripts
----
-
-| command               | description                                 |
-|-----------------------|---------------------------------------------|
-| `npm run help`        | Generates List of NPM Scripts you can run   |
-| `npm run build`       | Build & Compile Microdata Extractor         |
-| `npm run test`        | Perform Unit Tests                          |
-| `npm run lint`        | Tests Javascript Code against Linting Rules |
-| `npm run dev`         | Watches for Code Changes and runs linter    |
-| `npm run prepublish`  | Automatically Runs before: `npm publish`    |
-| `npm run postinstall` | Automatically Runs after: `npm install`     |
-
-
-#### See all scripts
-
-```
-npm run help
-```
-
-
-#### Filter scripts
-
-```
-npm run help [regex]
 ```

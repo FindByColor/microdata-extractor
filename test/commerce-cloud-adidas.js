@@ -6,31 +6,51 @@ import Microdata from '../src'
 
 const fileReader = (fileName) => fs.readFileSync(fileName, { encoding: 'utf-8' })
 
-/**
- * Test Commerce Cloud Markup
- */
-const expected = JSON.parse(fileReader('test/resources/commerce-cloud-adidas.json'))
-const html = fileReader('test/resources/commerce-cloud-adidas.html')
-const { microdata, rdfa, metatags, jsonld, product } = Microdata().extract(html)
+// Test Configuration
+const test = {
+  id: 'commerce-cloud-adidas',
+  label: 'Commerce Cloud - Adidas',
+  url: 'https://www.adidas.com/us/cloudfoam-pure-2.0--shoes/H04756.html'
+}
 
-// NOTE: If you need to generate new output, uncomment this console statement
-// console.log(JSON.stringify({ microdata, rdfa, metatags, jsonld }))
-console.log(product)
+// Create File Paths
+const fileExpected = `test/resources/${test.id}.json`
+const fileSource = `test/resources/${test.id}.html`
 
-describe('Microdata Extractor - Commerce Cloud - Adidas', function () {
+// Get File Data
+const html = fileReader(fileSource)
+const { jsonld, metatags, microdata, product, rdfa } = Microdata().extract(test.url, html)
+const results = JSON.stringify({ jsonld, metatags, microdata, product, rdfa })
+
+// Update Test Output if --update flag present ( only works with `npm run test:single` )
+if (process.argv.indexOf('--update') > -1) {
+  console.log(`✔ Updated ${fileExpected}`)
+  fs.writeFileSync(fileExpected, results)
+}
+
+// Build Comparison
+const output = JSON.parse(results)
+const expected = JSON.parse(fileReader(fileExpected))
+
+// Run Tests
+describe(`Microdata Extractor - ${test.label}`, function () {
   it('should find all elements with microdata', function () {
-    assert.deepEqual(microdata, expected.microdata)
+    assert.deepEqual(output.microdata, expected.microdata)
   })
 
   it('should find all elements with rdfa', function () {
-    assert.deepEqual(rdfa, expected.rdfa)
+    assert.deepEqual(output.rdfa, expected.rdfa)
   })
 
   it('should find embedded json-ld', function () {
-    assert.deepEqual(jsonld, expected.jsonld)
+    assert.deepEqual(output.jsonld, expected.jsonld)
   })
 
   it('should find embedded meta tags', function () {
-    assert.deepEqual(metatags, expected.metatags)
+    assert.deepEqual(output.metatags, expected.metatags)
+  })
+
+  it('should find embedded product', function () {
+    assert.deepEqual(output.product, expected.product)
   })
 })

@@ -17,5 +17,5 @@ export default $ => {
     metatagsData[name].push(value)
   })
 
-  return metatagsData
+  return JSON.stringify(metatagsData) !== '{}' ? metatagsData : null
 }

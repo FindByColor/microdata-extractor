@@ -1,9 +1,9 @@
 
-import { getCheerioObject } from './utils'
+import { getDOM } from './utils'
 import $ from 'cheerio'
 
 export default html => {
-  const $html = getCheerioObject(html)
+  const $html = getDOM(html)
   const jsonldData = {}
 
   $html('script[type="application/ld+json"]').each((index, item) => {
@@ -28,5 +28,5 @@ export default html => {
     } catch (e) {}
   })
 
-  return jsonldData
+  return JSON.stringify(jsonldData) !== '{}' ? jsonldData : null
 }
